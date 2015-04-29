@@ -2,7 +2,7 @@ Package.describe({
   name: 'yuukan:streamy-rooms',
   version: '1.1.0',
   // Brief, one-line summary of the package.
-  summary: 'Added rooms support to streamy',
+  summary: 'Add rooms support to streamy',
   // URL to the Git repository containing the source code for this package.
   git: 'https://github.com/YuukanOO/streamy-rooms',
   // By default, Meteor will default to using README.md for documentation.

@@ -1,4 +1,4 @@
-# streamy-rooms: Added rooms support to [Streamy](https://github.com/YuukanOO/streamy).
+# streamy-rooms: Add rooms support to [Streamy](https://github.com/YuukanOO/streamy).
 
 ## Installation
 
@@ -10,7 +10,7 @@ meteor add yuukan:streamy-rooms
 
 ## Rooms
 
-Once installed, you have access to the `Streamy.Rooms`. It let you sends messages to specific rooms. Rooms are stored in a Mongo collection named `streamy_rooms` and is available through `Streamy.Rooms.model`.
+Once installed, you have access to `Streamy.Rooms`. It let you sends messages to specific rooms. Rooms are stored in a Mongo collection named `streamy_rooms` and is available through `Streamy.Rooms.model`.
 
 A room record is described as follow:
 
