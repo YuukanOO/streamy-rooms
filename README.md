@@ -14,7 +14,7 @@ Once installed, you have access to `Streamy.Rooms`. It let you sends messages to
 
 A room record is described as follow:
 
-```json
+```javascript
 {
   "_id": "mongo id",
   "name": "The room name",
