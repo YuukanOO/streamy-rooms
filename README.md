@@ -20,7 +20,7 @@ A room record is described as follow:
   "name": "The room name",
   "session_ids": [
     "Every connected",
-    "session IDs"
+    "session IDs" // As returned by Streamy.id
   ]
 }
 ```
@@ -61,7 +61,7 @@ Streamy.Rooms.allowMessage = function() {
   // Check if the user appears in this room, this is the default implementation
   return Streamy.Rooms.model.find({ 
     'name': data.__in, 
-    'session_ids': from.id
+    'session_ids': Streamy.id(from)
   }).count() > 0;
 }
 ```
@@ -71,14 +71,14 @@ By default, when a user join or leave a room, the server will send notifications
 ```javascript
 Streamy.Rooms.onJoin = function(room_name, socket) {
   Streamy.rooms(room_name).emit('__join__', {
-    'sid': socket.id,
+    'sid': Streamy.id(socket),
     'room': room_name
   });
 };
 
 Streamy.Rooms.onLeave = function(room_name, socket) {
   Streamy.rooms(room_name).emit('__leave__', {
-    'sid': socket.id,
+    'sid': Streamy.id(socket),
     'room': room_name
   });
 };
