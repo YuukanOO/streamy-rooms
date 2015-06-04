@@ -16,7 +16,7 @@ Package.onUse(function(api) {
   api.use([
     'underscore',
     'mongo',
-    'yuukan:streamy@1.1.0'
+    'yuukan:streamy@1.2.0'
   ]);
   
   // Both
