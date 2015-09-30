@@ -84,6 +84,19 @@ Streamy.Rooms.onLeave = function(room_name, socket) {
 };
 ```
 
+Since version 1.2.5, you can override the method `onEmit` if you want to customize the emit behaviour:
+
+```javascript
+Streamy.Rooms.onEmit = function(msg, data, from, to) {
+  // from and to are session ids
+  // For example, if you do not want to send the message back to its emitter, just use the following code:
+  if(msg === '__join__')
+      return true;
+
+  return from !== to;
+};
+```
+
 The collection is not published so you'll have to do it yourself, check the [example](https://github.com/YuukanOO/streamy/tree/master/examples/chat) if you don't know where to start.
 
 ### Streamy.join(room_name)

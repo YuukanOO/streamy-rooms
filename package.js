@@ -1,6 +1,6 @@
 Package.describe({
   name: 'yuukan:streamy-rooms',
-  version: '1.2.0',
+  version: '1.2.5',
   // Brief, one-line summary of the package.
   summary: 'Add rooms support to streamy',
   // URL to the Git repository containing the source code for this package.
@@ -16,7 +16,8 @@ Package.onUse(function(api) {
   api.use([
     'underscore',
     'mongo',
-    'yuukan:streamy@1.2.0'
+    'check',
+    'yuukan:streamy@1.2.5'
   ]);
   
   // Both
@@ -34,6 +35,8 @@ Package.onUse(function(api) {
   api.addFiles([
     'lib/rooms_server.js'
   ], 'server');
+
+  api.imply('yuukan:streamy');
 });
 
 Package.onTest(function(api) {
